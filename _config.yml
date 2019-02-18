@@ -25,6 +25,9 @@ description: A virtual proof that name is awesome!
 navbar-links:
   About Me: "aboutme"
   CV: "mycv"
+  Publications and Preprints: "publication"
+  Codes: "codes"
+  Contact: "contact"
   Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
