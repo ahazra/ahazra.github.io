@@ -11,41 +11,38 @@ author_profile: true
 Teaching
 ======
 
-**August, 2023 - December, 2023**
 
-ME 3601 Computational Fluid Dynamics, IIT Palakkad, 2023 (Jointly with Dr. Ganesh Natarajan)
+ME 5614 Computational Fluid Dynamics, IIT Palakkad, 2023, 2024
 
-ME 1130 Engineering Drawing, IIT Palakkad
+ME 5632 Computational methods for inverse problems, IIT Palakkad, 2024
 
-**December, 2022 - March, 2023**
-
-Introduction to Machine Learning, 2023, GITAM University
-
-**September, 2022 - November, 2023**
-
-Operations Research, 2022, GITAM University
-
+ME 1130 Engineering Drawing, IIT Palakkad, 2023
 
 
 
 Research Guidance
 ======
 
-**Doctoral Student**
+**Master of Science (M.S)**
 
-1. Rohit Palamoottil (2023-), Mechanical Engineering
+1. Pradipan Moitra (2024-), Mechanical Engineering
 
 **Masters Student**
 
-1. Ninad Nandkumar Chavan (2023-)
+1. Ninad Nandkumar Chavan (2023-24), Data Science
 
-2. Dubbaku Rajesh (2023-), Mathematics
+2. Dubbaku Rajesh (2023-24), Mathematics
 
-3. Pinni Vamshi Krishna (2023-), Mathematics
+3. Pinni Vamshi Krishna (2023-24), Mathematics
+
+4. Manas Kumar Sinha (2024-), Mathematics
+
 
 **Bachelor Student**
 
-1. Akhila Mahipathi & Allam Tharun (2023-), Mechanical Engineering
+1. Akhila Mahipathi & Allam Tharun (2023-24), Mechanical Engineering
 
-2. Sanjay Barath G & Waghmare Aniketh (2023-), Mechanical Engineering
+2. Sanjay Barath G & Waghmare Aniketh (2023-24), Mechanical Engineering
+
+3. Sreeja Jarajapu (2024-), Mechanical Engineering
 
