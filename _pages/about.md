@@ -17,15 +17,15 @@ Below are some key areas of my current research:
 
 The main focus of my current research is on developing and applying deep learning and machine learning techniques to solve complex problems in science and engineering. Additionally, I aim to accelerate these processes by eliminating computational bottlenecks. At present, my work centers on the following key sub-areas:
 
-1. **Physics-Based Techniques for Inverse Problems**.
+- **Physics-Based Techniques for Inverse Problems**.
 
 In this area, I develop and apply methods that integrate fundamental physical laws and mathematical models to solve inverse problems. This approach enables the derivation of technically optimal solutions while ensuring that the results remain physically consistent. By harnessing well-established principles from physics, my work addresses various aspects of inverse analysis, bridging the gap between theoretical formulations and practical applications.
 
-2. **Deep-Learning-Based Bayesian Inversion**.
+- **Deep-Learning-Based Bayesian Inversion**.
 
 I am developing deep learning-based techniques for Bayesian inversion, focusing on the estimation of unknown parameters and the quantification of associated uncertainties. By combining deep learning with Bayesian inference, these methods provide robust parameter estimates along with comprehensive uncertainty quantification. This is particularly important for ensuring the reliability and interpretability of solutions in complex, real-world systems.
 
-3. **Data-Driven Constitutive Modeling in Continuum Mechanics**
+- **Data-Driven Constitutive Modeling in Continuum Mechanics**
 
 More recently, I have begun working on data-driven constitutive modeling aimed at discovering constitutive relations for various hyperelastic and viscoelastic materials. This research integrates machine learning with the mathematical and physical principles of continuum mechanics to develop generalized constitutive models of material behavior, offering a robust alternative to traditional phenomenological models.
 

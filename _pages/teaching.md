@@ -8,9 +8,7 @@ author_profile: true
 {% include base_path %}
 
 
-Teaching
-======
-
+## Teaching
 
 ME 5614 Computational Fluid Dynamics, IIT Palakkad, 2023, 2024
 
@@ -20,29 +18,28 @@ ME 1130 Engineering Drawing, IIT Palakkad, 2023
 
 
 
-Research Guidance
-======
+## Research Guidance
 
 **Master of Science (M.S)**
 
-1. Pradipan Moitra (2024-), Mechanical Engineering
+- Pradipan Moitra (2024-), Mechanical Engineering
 
 **Masters Student**
 
-1. Ninad Nandkumar Chavan (2023-24), Data Science
+- Ninad Nandkumar Chavan (2023-24), Data Science
 
-2. Dubbaku Rajesh (2023-24), Mathematics
+- Dubbaku Rajesh (2023-24), Mathematics
 
-3. Pinni Vamshi Krishna (2023-24), Mathematics
+- Pinni Vamshi Krishna (2023-24), Mathematics
 
-4. Manas Kumar Sinha (2024-), Mathematics
+- Manas Kumar Sinha (2024-), Mathematics
 
 
 **Bachelor Student**
 
-1. Akhila Mahipathi & Allam Tharun (2023-24), Mechanical Engineering
+- Akhila Mahipathi & Allam Tharun (2023-24), Mechanical Engineering
 
-2. Sanjay Barath G & Waghmare Aniketh (2023-24), Mechanical Engineering
+- Sanjay Barath G & Waghmare Aniketh (2023-24), Mechanical Engineering
 
-3. Sreeja Jarajapu (2024-), Mechanical Engineering
+- Sreeja Jarajapu (2024-), Mechanical Engineering
 
