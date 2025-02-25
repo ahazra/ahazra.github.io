@@ -37,7 +37,7 @@ Subsequently, I focused on developing higher-order schemes for electrodynamics a
 
 I am also deeply interested in the broader challenges of wave propagation and magnetohydrodynamics, topics that continue to inspire further exploration in this direction.
 
-## PhD Work: Dynamic MRI and Image Reconstruction
+## PhD Work: Numerical Modelling, Simulation and Experimental Validation of Dynamic MRI
 
 During my PhD, I collaborated with an interdisciplinary team of scientists specializing in various aspects of magnetic resonance imaging (MRI). My thesis focused on the numerical modeling, simulation, and experimental validation of dynamic MRI, with a particular emphasis on flow MRI.
 
