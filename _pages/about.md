@@ -13,17 +13,16 @@ I am a Ramanujan Faculty Fellow in the [Department of Mechanical Engineering](ht
 
 Below are some key areas of my current research:
 
-## Scientific Machine Learning and Deep Learning-Based Inversion
+## Scientific Machine Learning and Deep Learning-Based Techniques for Solving Inverse Problems
 
-The main focus of my current research is on developing and applying deep learning and machine learning techniques to solve complex problems in science and engineering. Additionally, I aim to accelerate these processes by eliminating computational bottlenecks. At present, my work centers on the following key sub-areas:
+The main focus of my current research is on developing and applying deep learning and machine learning techniques to solve complex problems in science and engineering. At present, my work centers on the following key sub-areas:
 
 - **Physics-Based Techniques for Inverse Problems**.
 
-In this area, I develop and apply methods that integrate fundamental physical laws and mathematical models to solve inverse problems. This approach enables the derivation of technically optimal solutions while ensuring that the results remain physically consistent. By harnessing well-established principles from physics, my work addresses various aspects of inverse analysis, bridging the gap between theoretical formulations and practical applications.
+I design methods that integrate fundamental physical laws with mathematical models to solve inverse problems. This approach yields technically optimal solutions while maintaining physical consistency and bridges the gap between theoretical formulations and practical applications.
 
 - **Deep-Learning-Based Bayesian Inversion**.
-
-I am developing deep learning-based techniques for Bayesian inversion, focusing on the estimation of unknown parameters and the quantification of associated uncertainties. By combining deep learning with Bayesian inference, these methods provide robust parameter estimates along with comprehensive uncertainty quantification. This is particularly important for ensuring the reliability and interpretability of solutions in complex, real-world systems.
+I am currently working on methods that combine deep learning with Bayesian inference to accurately estimate unknown parameters and effectively measure uncertainties. These approaches yield robust parameter estimations and thorough uncertainty assessments, ensuring dependable and interpretable results in complex, real-world systems.
 
 - **Data-Driven Constitutive Modeling in Continuum Mechanics**
 
