@@ -37,11 +37,11 @@ engineering systems.
 
 ## Research Supervision
 
+**M.S. (Thesis)** -- Pradipan Moitra (2024-- ), Mechanical Engineering
+
 **Postdoctoral Fellow** -- Abhishek Shrivastava (Feb 2026-- ), PhD (Mechanical Engineering, IIT Delhi, submitted) 
 
 **Project Associate** -- Jariful Hassan (Nov 2025-- ), M.Sc Mathematics, South Asian University
-
-**M.S. (Thesis)** -- Pradipan Moitra (2024-- ), Mechanical Engineering
 
 **Master's Projects** -- Manas K. Sinha (2024--25), Ninad N. Chavan, Dubbaku Rajesh, Vamshi Krishna Pinni (2023--24); -- Data Science, Mathematics, and Mathematics & Computing
 
