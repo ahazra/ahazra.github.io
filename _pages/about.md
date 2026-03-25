@@ -100,7 +100,7 @@ Beyond research, I enjoy teaching, mentoring, and conversations that wander well
   <li>Uncertainty quantification for robust engineering predictions</li>
 <li>Reduced order models for fast and reliable simulation</li>
   <li>High-order methods for computational electromagnetics--foundations in place, looking for motivated students to take this further</li>
-  <li>MHD, compressible flow, and aeroacoustics — areas I intend to grow into</li>
+  <li>MHD, compressible flow, and aeroacoustics -- areas I intend to grow into</li>
 </ul>
 </div>
 
@@ -112,13 +112,13 @@ Beyond research, I enjoy teaching, mentoring, and conversations that wander well
 I am actively looking for motivated students and researchers to join the group at IIT Palakkad.
 </p>
 <p>
-<strong>M.S. (Research) &amp; Ph.D.</strong> — Positions are available in computational modeling and scientific machine learning for thermo-fluid and other multi-physics systems. Candidates with a background in mechanical or aerospace engineering, mathematics, or computational physics are encouraged to apply through the <a href="https://iitpkd.ac.in/admissions">IIT Palakkad admissions portal</a>.
+<strong>M.S. (Research) &amp; Ph.D.</strong> -- Positions are available in computational modeling and scientific machine learning for thermo-fluid and other multi-physics systems. Candidates with a background in mechanical or aerospace engineering, mathematics, or computational physics are encouraged to apply through the <a href="https://iitpkd.ac.in/admissions">IIT Palakkad admissions portal</a>.
 </p>
 <p>
-<strong>B.Tech. / M.Tech. Projects</strong> — IIT Palakkad students interested in thesis or project work are welcome to get in touch directly by email.
+<strong>B.Tech. / M.Tech. Projects</strong> -- IIT Palakkad students interested in thesis or project work are welcome to get in touch directly by email.
 </p>
 <p>
-<strong>Postdoctoral Positions</strong> — no funded openings currently, but strong candidates are encouraged to reach out to discuss fellowship options (SERB-NPDF, NBHM, IPDF etc.).
+<strong>Postdoctoral Positions</strong> -- no funded openings currently, but strong candidates are encouraged to reach out to discuss fellowship options (SERB-NPDF, NBHM, IPDF etc.).
 </p>
 </div>
 
