@@ -1,0 +1,126 @@
+@article{hazra_globally_2019,
+  title = {Globally Constraint-Preserving {{FR}}/{{DG}} Scheme for {{Maxwell}}'s Equations at All Orders},
+  author = {Hazra, Arijit and Chandrashekar, Praveen and Balsara, Dinshaw S.},
+  date = {2019-10},
+  journaltitle = {J. Comput. Phys.},
+  volume = {394},
+  pages = {298--328},
+  doi = {10.1016/j.jcp.2019.06.003},
+  urldate = {2022-04-05},
+  abstract = {Computational electrodynamics (CED), the numerical solution of Maxwell’s equations, plays an incredibly important role in several problems in science and engineering. High accuracy solutions are desired, and the discontinuous Galerkin (DG) method is one of the better ways of delivering high accuracy in numerical CED. Maxwell’s equations have a pair of involution constraints for which mimetic schemes that globally satisfy the constraints at a discrete level are highly desirable. Balsara and Käppeli (2019) presented a von Neumann stability analysis of globally constraint-preserving DG schemes for CED up to fourth order. That paper was focused on developing the theory and documenting the superior dissipation and dispersion of DGTD schemes in media with constant permittivity and permeability. In this paper we present working DGTD schemes for CED that go up to fifth order of accuracy and analyze their performance when permittivity and permeability vary strongly in space. Our DGTD schemes achieve constraint preservation by collocating the electric displacement and magnetic induction as well as their higher order modes in the faces of the mesh. Our first finding is that at fourth and higher orders of accuracy, one has to evolve some zone-centered modes in addition to the face-centered modes. It is well-known that the limiting step in DG schemes causes a reduction of the optimal accuracy of the scheme; though the schemes still retain their formal order of accuracy with WENO-type limiters. In this paper, we document simulations where permittivity and permeability vary by almost an order of magnitude without requiring any limiting of the DG scheme. This very favorable second finding ensures that DGTD schemes retain optimal accuracy even in the presence of large spatial variations in permittivity and permeability. We also study the conservation of electromagnetic energy in these problems. Our third finding shows that the electromagnetic energy is conserved very well even when permittivity and permeability vary strongly in space; as long as the conductivity is zero.},
+  langid = {english},
+  keywords = {Journal Article},
+  file = {/media/data/Research_Materials/Papers/Hazra et al. - 2019 - Globally constraint-preserving FRDG scheme for Ma.pdf;/media/data/Research_Materials/Papers/Hazra et al. - 2019 - Globally constraint-preserving FRDG scheme for Ma.pdf;/media/Lectures/Research_Materials/Papers/Hazra et al. - 2019 - Globally constraint-preserving FRDG scheme for Ma.pdf}
+}
+
+@article{hazra_multidimensional_2023,
+  title = {Multidimensional {{Generalized Riemann Problem Solver}} for {{Maxwell}}’s {{Equations}}},
+  author = {Hazra, Arijit and Balsara, Dinshaw S. and Chandrashekar, Praveen and Garain, Sudip K.},
+  date = {2023-07},
+  journaltitle = {J Sci Comput},
+  volume = {96},
+  number = {1},
+  pages = {26},
+  doi = {10.1007/s10915-023-02238-x},
+  urldate = {2023-06-25},
+  langid = {english},
+  keywords = {Journal Article},
+  file = {/media/data/Research_Materials/Papers/Hazra et al. - 2023 - Multidimensional Generalized Riemann Problem Solve 3.pdf;/media/data/Research_Materials/Papers/Hazra et al. - 2023 - Multidimensional Generalized Riemann Problem Solve.pdf;/media/Lectures/Research_Materials/Papers/Hazra et al. - 2023 - Multidimensional Generalized Riemann Problem Solve.pdf}
+}
+
+@online{hazra_multidimensional_2023a,
+  title = {Multidimensional {{Generalized Riemann Problem Solver}} for {{Maxwell}}'s {{Equations}}},
+  author = {Hazra, Arijit and Balsara, Dinshaw S. and Chandrashekar, Praveen and Garain, Sudip K.},
+  date = {2023-04-30},
+  eprint = {2211.09016},
+  eprinttype = {arXiv},
+  eprintclass = {physics},
+  doi = {https://arxiv.org/abs/2211.09016v2},
+  urldate = {2023-05-07},
+  abstract = {Approximate multidimensional Riemann solvers are essential building blocks in designing globally constraint-preserving finite volume time domain (FVTD) and discontinuous Galerkin time domain (DGTD) schemes for computational electrodynamics (CED). In those schemes, we can achieve high-order temporal accuracy with the help of Runge-Kutta or ADER time-stepping. This paper presents the design of a multidimensional approximate Generalized Riemann Problem (GRP) solver for the first time. The multidimensional Riemann solver accepts as its inputs the four states surrounding an edge on a structured mesh, and its output consists of a resolved state and its associated fluxes. In contrast, the multidimensional GRP solver accepts as its inputs the four states and their gradients in all directions; its output consists of the resolved state and its corresponding fluxes and the gradients of the resolved state. The gradients can then be used to extend the solution in time. As a result, we achieve second-order temporal accuracy in a single step.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Journal Article},
+  note = {Comment: 38 Pages, 10 figures},
+  file = {/media/data/Research_Materials/Papers/Hazra et al. - 2023 - Multidimensional Generalized Riemann Problem Solve.pdf}
+}
+
+@inproceedings{hazra_numerical_19,
+  title = {Numerical Simulation of Flow Effects for Real-Time {{MRI}}},
+  booktitle = {18. Jahrestagung der Deutschen Sektion der ISMRM e.V.},
+  author = {Hazra, A. and Voit, D. and Frahm, J.},
+  date = {2015-11-20},
+  location = {Münster, Germany},
+  eventtitle = {{{ISMRM German Chapter}}},
+  langid = {english},
+  keywords = {Conference Paper}
+}
+
+@thesis{hazra_numerical_2016,
+  title = {Numerical {{Simulation}} of {{Bloch Equations}} for {{Dynamic Magnetic Resonance Imaging}}},
+  author = {Hazra, Arijit},
+  date = {2016},
+  institution = {Georg-August-Universität Göttingen},
+  location = {Göttingen},
+  abstract = {With recent advancements of image reconstruction techniques, magnetic resonance imaging (MRI) can produce real-time images at a temporal resolution of 10 to 40 ms to observe complex physiological processes and also serves as a powerful tool for quantitative studies. However, a comprehensive quantitative understanding of the mechanisms that lead to MRI signal alterations when imaging flowing spins or other dynamic processes is still lacking. This thesis aims at the quantitative analysis of dynamic signal changes using modeling and numerical simulation of Bloch equations for MRI with a special focus on flow. To this end, a numerical simulator was developed for spatially stationary objects and was extended further for flowing objects. Operator splitting approaches were used extensively for the development of the simulator. Parallelizing with graphical processing unit (GPU) computations resulted in a significant reduction in the simulation time. Simulation methods were tested against in vitro experiments with static phantom and fluid flow. The simulated results support the experimental evidence of remarkable sensitivity of signal magnitude to slow flow. Also, the results hint at the possibility of computer-aided estimation of experimental parameters like flow velocity or relaxation time constants, which can cater for the growing demand in MRI for estimation of clinically relevant quantitative informations. Keywords: Magnetic resonance imaging; Bloch equation modeling; Flowing spins; Radial FLASH; Operator splitting; Finite volume methods; GPU computing},
+  langid = {english},
+  keywords = {Thesis},
+  file = {/media/data/Research_Materials/Notes_Talks_Lectures/Thesis/Hazra - 2016 - Numerical simulation of bloch equations for dynami.pdf;/media/Lectures/Research_Materials/Notes_Talks_Lectures/Thesis/Hazra - 2016 - Numerical simulation of bloch equations for dynami.pdf}
+}
+
+@article{hazra_numerical_2018,
+  title = {Numerical Simulation of {{Bloch}} Equations for Dynamic Magnetic Resonance Imaging},
+  author = {Hazra, Arijit and Lube, Gert and Raumer, Hans-Georg},
+  date = {2018-01},
+  journaltitle = {Applied Numerical Mathematics},
+  volume = {123},
+  pages = {241--255},
+  doi = {10.1016/j.apnum.2017.09.007},
+  urldate = {2024-07-26},
+  langid = {english},
+  keywords = {Journal Article},
+  file = {/media/data/Research_Materials/Papers/Hazra et al. - 2018 - Numerical simulation of Bloch equations for dynami.pdf;/media/data/Research_Materials/Papers/Hazra et al. - 2018 - Numerical simulation of Bloch equations for dynami.pdf}
+}
+
+@article{hazra_pinnbased_2026a,
+  title = {{{PINN-based}} Estimation of Convective Heat Transfer in Jet Impingement Cooling},
+  author = {Hazra, Arijit and Sarkar, Prahar and Sarkar, Sourav},
+  date = {2026-01},
+  journaltitle = {Applied Thermal Engineering},
+  volume = {284},
+  pages = {129088},
+  doi = {10.1016/j.applthermaleng.2025.129088},
+  urldate = {2026-03-03},
+  langid = {english},
+  file = {/media/data/Research_Materials/Papers/Hazra et al. - 2026 - PINN-based estimation of convective heat transfer in jet impingement cooling.pdf;/media/Lectures/Research_Materials/Papers/Hazra et al. - 2026 - PINN-based estimation of convective heat transfer in jet impingement cooling.pdf}
+}
+
+@article{kappeli_optimal_2020a,
+  title = {Optimal, Globally Constraint-Preserving, {{DG}}({{TD}})2 Schemes for Computational Electrodynamics Based on Two-Derivative {{Runge-Kutta}} Timestepping and Multidimensional Generalized {{Riemann}} Problem Solvers – {{A}} von {{Neumann}} Stability Analysis},
+  author = {Käppeli, Roger and Balsara, Dinshaw S. and Chandrashekar, Praveen and Hazra, Arijit},
+  date = {2020-05},
+  journaltitle = {J. Comput. Phys.},
+  volume = {408},
+  pages = {109238},
+  doi = {10.1016/j.jcp.2020.109238},
+  urldate = {2022-11-11},
+  langid = {english},
+  keywords = {Journal Article},
+  file = {/media/data/Research_Materials/Papers/Käppeli et al. - 2020 - Optimal, globally constraint-preserving, DG(TD)2 s.pdf;/media/data/Research_Materials/Papers/Käppeli et al. - 2020 - Optimal, globally constraint-preserving, DG(TD)2 s.pdf}
+}
+
+@article{shahriari_deep_2022,
+  title = {A Deep Learning Approach to Design a Borehole Instrument for Geosteering},
+  author = {Shahriari, M. and Hazra, A. and Pardo, D.},
+  date = {2022-03-01},
+  journaltitle = {Geophysics},
+  volume = {87},
+  number = {2},
+  pages = {D83-D90},
+  doi = {10.1190/geo2021-0240.1},
+  urldate = {2022-06-02},
+  abstract = {Deep neural network (DNN)-based methods are suitable for the rapid inversion of borehole resistivity measurements. They approximate the forward and the inverse problem offline during the training phase, and they only require a fraction of a second for the online evaluation (aka prediction). Herein, we have adopted a DNN-based iterative algorithm to design a borehole instrument such that the inverse solution is unique for a given earth parameterization. We select a large set of electromagnetic measurement systems routinely used in logging operations, and our DNN algorithm selects a subset of measurements that are suitable for inversion purposes. Numerical results with synthetic data confirm that this approach can provide valuable insight when designing borehole-logging instruments.},
+  langid = {english},
+  keywords = {Journal Article},
+  file = {/media/data/Research_Materials/Papers/Shahriari et al. - 2022 - A deep learning approach to design a borehole inst 2.pdf;/media/data/Research_Materials/Papers/Shahriari et al. - 2022 - A deep learning approach to design a borehole instrument for geosteering.pdf;/media/Lectures/Research_Materials/Papers/Abadi et al. - 2016 - TensorFlow a system for Large-Scale machine learning.pdf}
+}

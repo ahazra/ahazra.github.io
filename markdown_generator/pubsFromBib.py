@@ -11,19 +11,22 @@ import re
 publist = {
     "journal": {
         "file": "Journ_pub.bib",
+        "entry_type": "article",
         "keywords": "journaltitle",
         "venue-pretext": "",
         "collection": {"name": "publications", "type": "journal", "permalink": "/publication/"}
     },
     "conference": {
         "file": "MyPub.bib",
+        "entry_type": "inproceedings",
         "keywords": "booktitle",
         "venue-pretext": "In the proceedings of ",
         "collection": {"name": "publications", "type": "conference", "permalink": "/publication/"}
     },
     "thesis": {
         "file": "MyPub.bib",
-        "keywords": "school",
+        "entry_type": "thesis",
+        "keywords": "institution",
         "venue-pretext": "",
         "collection": {"name": "publications", "type": "thesis", "permalink": "/publication/"}
     }
@@ -49,7 +52,10 @@ for pubsource, meta in publist.items():
     parser = bibtex.Parser()
     bibdata = parser.parse_file(meta["file"])
 
+    entry_type_filter = meta.get("entry_type")
     for bib_id in bibdata.entries:
+        if entry_type_filter and bibdata.entries[bib_id].type != entry_type_filter:
+            continue
         b = bibdata.entries[bib_id].fields
         pub_day = "01"
 
