@@ -37,7 +37,7 @@ engineering systems.
 
 ## Research Supervision
 
-**M.S. (Thesis)** -- Pradipan Moitra (2024-- ), Mechanical Engineering
+**M.S. (Thesis)** -- Pradipan Maitra (2024-- ), Mechanical Engineering
 
 **Postdoctoral Fellow** -- Abhishek Shrivastava (Feb 2026-- ), PhD (Mechanical Engineering, IIT Delhi, submitted) 
 

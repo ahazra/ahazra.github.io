@@ -7,7 +7,7 @@ redirect_from:
   - /talks/
 ---
 
-Publications, theses, and technical reports — organised by type, with links to DOI, arXiv, and PDF where available.
+Publications, theses, and technical reports -- organised by type, with links to DOI, arXiv, and PDF where available.
 
 {% include base_path %}
 
