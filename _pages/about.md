@@ -1,56 +1,124 @@
 ---
+layout: single
+title: ""
 permalink: /
-[//]: # title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
-title: "Welcome to my website"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-I am a Ramanujan Faculty Fellow in the [Department of Mechanical Engineering](https://iitpkd.ac.in/mechanical-engineering),[Indian Institute of Technology, Palakkad](https://iitpkd.ac.in/). My research lies at the intersection of computational science and engineering, encompassing a broad range of topics such as high-accuracy numerical scheme development, high-performance scientific computing, and scientific machine learning. 
+<style>
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0 1.8rem;
+}
+.research-card {
+  background: #1a2332;
+  border: 1px solid #2d3f55;
+  border-left: 3px solid #60a5fa;
+  border-radius: 5px;
+  padding: 1rem 1.1rem;
+}
+.research-card.future { border-left-color: #818cf8; }
+.research-card.methods { border-left-color: #34d399; }
+.research-card h4 {
+  margin: 0 0 0.45rem;
+  font-size: 0.88em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+.research-card.methods h4 { color: #6ee7b7; }
+.research-card.future h4  { color: #a5b4fc; }
+.research-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.88em;
+  color: #d1d5db;
+  line-height: 1.65;
+}
+.research-card ul li { margin-bottom: 0.15rem; }
+.positions-box {
+  background: #1a2332;
+  border: 1px solid #2d3f55;
+  border-left: 3px solid #fbbf24;
+  border-radius: 5px;
+  padding: 0.9rem 1.1rem;
+  margin-top: 1.6rem;
+  font-size: 0.9em;
+}
+.positions-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.88em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcd34d;
+}
+.positions-box p { margin: 0.2rem 0; color: #d1d5db; line-height: 1.6; }
+.positions-box a { color: #93c5fd; }
+</style>
+I am a Ramanujan Faculty Fellow in the [Department of Mechanical Engineering](https://iitpkd.ac    .in/mechanical-engineering) at [Indian Institute of Technology Palakkad](https://iitpkd.ac.in/). My research sits at the intersection of applied mathematics, computational science, and engineering -- focused on building mathematical and computational methods for physical systems governed by partial differential equations. 
 
-Below are some key areas of my current research:
+In practice, this means combining numerical simulation, mathematical modeling, and scientific machine learning to understand and solve forward and inverse problems across thermo-fluid systems, electromagnetics, and multi-physics phenomena. The underlying ambition is simple: to develop tools that make complex physical systems legible -- amenable to monitoring, prediction, and understanding.
 
-## Scientific Machine Learning and Deep Learning-Based Techniques for Solving Inverse Problems
+Beyond research, I enjoy teaching, mentoring, and conversations that wander well beyond science. My door is open.
 
-The main focus of my current research is on developing and applying deep learning and machine learning techniques to solve complex problems in science and engineering. At present, my work centers on the following key sub-areas:
+## Research at a Glance
 
-- **Physics-Based Techniques for Inverse Problems**.
+<div class="research-grid">
 
-I design methods that integrate fundamental physical laws with mathematical models to solve inverse problems. This approach yields technically optimal solutions while maintaining physical consistency and bridges the gap between theoretical formulations and practical applications.
+<div class="research-card">
+<h4>Parameter Estimation &amp; Inverse Problems</h4>
+<ul>
+  <li>Deterministic and Bayesian approaches for unknown parameters in PDE-based models</li>
+  <li>Regularization methods for stable recovery from sparse and noisy measurements</li>
+<li>State estimation and real-time monitoring of physical systems</li>
+  <li>Digital twins for thermo-fluid and multi-physics systems</li>
+  <li>Applications in thermo-fluid, other engineering, and biological systems</li>
+</ul>
+</div>
 
-- **Deep-Learning-Based Bayesian Inversion**.
-I am currently working on methods that combine deep learning with Bayesian inference to accurately estimate unknown parameters and effectively measure uncertainties. These approaches yield robust parameter estimations and thorough uncertainty assessments, ensuring dependable and interpretable results in complex, real-world systems.
+<div class="research-card methods">
+<h4>Numerical Methods for PDEs</h4>
+<ul>
+  <li>High-order discretization methods for PDEs (e.g. Discontinuous Galerkin)</li>
+  <li>Structure- and constraint-preserving numerical schemes</li>
+  <li>Applications in fluid flow, electromagnetics, MHD, and flow MRI</li>
+<li>Time integration and solver strategies for stiff problems</li>
+<li>Scalable solvers and high-performance computing for large-scale PDE systems</li>
+</ul>
+</div>
 
-- **Data-Driven Constitutive Modeling in Continuum Mechanics**
+<div class="research-card future">
+<h4>Emerging Directions</h4>
+<ul>
+  <li>Scientific machine learning and physics-informed neural networks for PDEs</li>
+  <li>Uncertainty quantification for robust engineering predictions</li>
+<li>Reduced order models for fast and reliable simulation</li>
+  <li>High-order methods for computational electromagnetics--foundations in place, looking for motivated students to take this further</li>
+  <li>MHD, compressible flow, and aeroacoustics — areas I intend to grow into</li>
+</ul>
+</div>
 
-More recently, I have begun working on data-driven constitutive modeling aimed at discovering constitutive relations for various hyperelastic and viscoelastic materials. This research integrates machine learning with the mathematical and physical principles of continuum mechanics to develop generalized constitutive models of material behavior, offering a robust alternative to traditional phenomenological models.
+</div>
 
-## Higher-Order Numerical Scheme Development for Computational Electrodynamics (CED)
+<div class="positions-box">
+<h3>Open Positions</h3>
+<p>
+I am actively looking for motivated students and researchers to join the group at IIT Palakkad.
+</p>
+<p>
+<strong>M.S. (Research) &amp; Ph.D.</strong> — Positions are available in computational modeling and scientific machine learning for thermo-fluid and other multi-physics systems. Candidates with a background in mechanical or aerospace engineering, mathematics, or computational physics are encouraged to apply through the <a href="https://iitpkd.ac.in/admissions">IIT Palakkad admissions portal</a>.
+</p>
+<p>
+<strong>B.Tech. / M.Tech. Projects</strong> — IIT Palakkad students interested in thesis or project work are welcome to get in touch directly by email.
+</p>
+<p>
+<strong>Postdoctoral Positions</strong> — no funded openings currently, but strong candidates are encouraged to reach out to discuss fellowship options (SERB-NPDF, NBHM, IPDF etc.).
+</p>
+</div>
 
-I have spent a significant portion of my research journey devising numerical schemes, developing code, and creating parallelized frameworks for various important partial differential equations that arise in science and engineering. As a computational engineer, my first experience with computational methods involved fluid flow equations. Later, I applied that experience to my PhD research on numerical modelling and simulation of flow MRI.
-
-Subsequently, I focused on developing higher-order schemes for electrodynamics and magnetohydrodynamics. More recently, I have been working on higher-order schemes for time-domain electrodynamics that utilize finite volume time-domain (FVTD) and discontinuous Galerkin time-domain (DGTD) methods. These techniques are designed to exhibit highly desirable properties—such as low dissipation, low dispersion, and energy preservation—thereby ensuring accurate and efficient simulations of electromagnetic wave propagation.
-
-I am also deeply interested in the broader challenges of wave propagation and magnetohydrodynamics, topics that continue to inspire further exploration in this direction.
-
-## PhD Work: Numerical Modelling, Simulation and Experimental Validation of Dynamic MRI
-
-During my PhD, I collaborated with an interdisciplinary team of scientists specializing in various aspects of magnetic resonance imaging (MRI). My thesis focused on the numerical modeling, simulation, and experimental validation of dynamic MRI, with a particular emphasis on flow MRI.
-
-Although I am no longer actively engaged in this field, I retain some interest in algebraic image reconstruction and related inverse problems. These topics inspire innovative ideas for potential collaborations, and I look forward to revisiting them with potential collaborators in the future.
-
-<!--- Academic background
-======
-
-
-{% include base_path %}
-# Selected publications
-{% for post in site.publications reversed %}
-{% if post.type == 'selected' %}
-{% include archive-single-cv.html %}
-{% endif %}
-{% endfor %}
---->

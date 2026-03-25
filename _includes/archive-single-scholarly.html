@@ -1,0 +1,34 @@
+<div class="publication-entry">
+
+  <h4 class="publication-title">
+    {{ post.title }}
+  </h4>
+
+  {% if post.authors %}
+  <p class="publication-authors">
+    {{ post.authors | join: ", " }}
+  </p>
+  {% endif %}
+
+  {% if post.venue %}
+  <p class="publication-venue">
+    <strong>{{ post.venue }}</strong>{% if post.year %}, {{ post.year }}{% endif %}
+  </p>
+  {% endif %}
+
+  {% if post.doi or post.pdf or post.arxiv %}
+  <p class="publication-links">
+    {% if post.doi %}
+      <a href="https://doi.org/{{ post.doi }}">DOI</a>
+    {% endif %}
+    {% if post.pdf %}
+      &nbsp;|&nbsp;<a href="{{ post.pdf }}">PDF</a>
+    {% endif %}
+    {% if post.arxiv %}
+      &nbsp;|&nbsp;<a href="https://arxiv.org/abs/{{ post.arxiv }}">arXiv</a>
+    {% endif %}
+  </p>
+  {% endif %}
+
+</div>
+

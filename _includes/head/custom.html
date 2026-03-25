@@ -35,4 +35,151 @@
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
+<style>
+  /* Hide empty page title and collapse its space */
+  .page__title:empty { display: none; }
+  .page__inner-wrap > header:has(.page__title:empty) { margin: 0; padding: 0; }
+
+  /* Remove top gap before first content element on all pages */
+  .page__content > *:first-child { margin-top: 0 !important; }
+
+  /* ── Soft dark navy override ─────────────────────────────────────── */
+
+  /* Base */
+  body {
+    background-color: #0f172a;
+    color: #e8e4dc;
+  }
+
+  /* Masthead / top nav */
+  .masthead,
+  .masthead__inner-wrap {
+    background-color: #0a1120;
+    border-bottom: 1px solid #1e2d45;
+  }
+  .masthead a,
+  .greedy-nav a,
+  .greedy-nav .visible-links a {
+    color: #cbd5e1;
+  }
+  .greedy-nav a:hover,
+  .greedy-nav .visible-links a:hover {
+    color: #94a3b8;
+  }
+  .greedy-nav .visible-links a::before {
+    background: #94a3b8;
+  }
+  /* Compact nav items so all fit without overflow into hidden dropdown */
+  .greedy-nav .visible-links > li > a {
+    padding: 0.4rem 0.45rem;
+    font-size: 0.82em;
+  }
+
+  /* Sidebar / author profile */
+  .sidebar,
+  .author__urls-wrapper {
+    background-color: #0f172a;
+  }
+  .author__name { color: #e8e4dc; }
+  .author__bio  { color: #94a3b8; }
+  .author__urls a,
+  .author__urls-wrapper .btn {
+    color: #94a3b8;
+  }
+  .author__urls a:hover { color: #cbd5e1; }
+  .author__urls-wrapper .btn {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #94a3b8;
+  }
+
+  /* Main content area */
+  .page__content,
+  .page__inner-wrap {
+    background-color: #0f172a;
+    color: #e8e4dc;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: #f1ede6;
+  }
+
+  /* Links */
+  a {
+    color: #7dd3fc;
+  }
+  a:hover {
+    color: #bae6fd;
+    text-decoration: underline;
+  }
+
+  /* Horizontal rules */
+  hr {
+    border-color: #1e2d45;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left-color: #7dd3fc;
+    color: #94a3b8;
+    background: #111827;
+  }
+
+  /* Code */
+  code, pre {
+    background: #111827;
+    color: #e2e8f0;
+    border-color: #1e2d45;
+  }
+
+  /* Tables */
+  table th {
+    background-color: #111827;
+    color: #f1ede6;
+    border-color: #1e2d45;
+  }
+  table td {
+    border-color: #1e2d45;
+    color: #e8e4dc;
+  }
+  table tr:nth-child(even) {
+    background-color: #111827;
+  }
+
+  /* Footer */
+  .page__footer {
+    background-color: #0a1120;
+    color: #475569;
+    border-top: 1px solid #1e2d45;
+  }
+  .page__footer a { color: #64748b; }
+
+  /* Buttons */
+  .btn--inverse {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #94a3b8;
+  }
+  .btn--inverse:hover {
+    background-color: #263347;
+    color: #cbd5e1;
+  }
+
+  /* Notice / alert boxes */
+  .notice,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    background-color: #111827;
+    border-color: #1e2d45;
+  }
+
+  /* Scrollbar (Webkit) */
+  ::-webkit-scrollbar { background: #0f172a; }
+  ::-webkit-scrollbar-thumb { background: #1e2d45; border-radius: 3px; }
+  /* ── end theme override ───────────────────────────────────────────── */
+</style>
+
 <!-- end custom head snippets -->

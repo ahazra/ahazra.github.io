@@ -1,182 +1,124 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Publications markdown generator for academicpages
-# 
-# Takes a set of bibtex of publications and converts them for use with [academicpages.github.io](academicpages.github.io). This is an interactive Jupyter notebook ([see more info here](http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html)). 
-# 
-# The core python code is also in `pubsFromBibs.py`. 
-# Run either from the `markdown_generator` folder after replacing updating the publist dictionary with:
-# * bib file names
-# * specific venue keys based on your bib file preferences
-# * any specific pre-text for specific files
-# * Collection Name (future feature)
-# 
-# TODO: Make this work with other databases of citations, 
-# TODO: Merge this with the existing TSV parsing solution
-
-
 from pybtex.database.input import bibtex
-import pybtex.database.input.bibtex 
-from time import strptime
+import pybtex.database.input.bibtex
 import string
 import html
 import os
 import re
 
-#todo: incorporate different collection types rather than a catch all publications, requires other changes to template
 publist = {
-    "proceeding": {
-        "file" :  "MyPub.bib",
+    "journal": {
+        "file": "Journ_pub.bib",
+        "keywords": "journaltitle",
+        "venue-pretext": "",
+        "collection": {"name": "publications", "type": "journal", "permalink": "/publication/"}
+    },
+    "conference": {
+        "file": "MyPub.bib",
         "keywords": "booktitle",
         "venue-pretext": "In the proceedings of ",
-        "collection" : {"name":"publications",
-                        "type":  "conference",
-                        "permalink":"/publication/"}
-        
+        "collection": {"name": "publications", "type": "conference", "permalink": "/publication/"}
     },
-    "journal":{
-        "file": "Journ_pub.bib",
-        "keywords" : "journaltitle",
-        "venue-pretext" : "",
-        "collection" : {"name":"publications",
-                        "type" :  "journal",
-                        "permalink":"/publication/"}
-    },
-    "thesis":{
+    "thesis": {
         "file": "MyPub.bib",
-        "type" : "thesis",
-        "keywords" : "school",
-        "venue-pretext" : "",
-        "collection" : {"name":"publications",
-                        "type":  "thesis",
-                        "permalink":"/publication/"}
-    } 
+        "keywords": "school",
+        "venue-pretext": "",
+        "collection": {"name": "publications", "type": "thesis", "permalink": "/publication/"}
+    }
 }
 
-html_escape_table = {
-    "&": "&amp;",
-    '"': "&quot;",
-    "'": "&apos;"
-    }
+html_escape_table = {"&": "&amp;", '"': "&quot;", "'": "&apos;"}
 
 def html_escape(text):
-    """Produce entities within text."""
-    return "".join(html_escape_table.get(c,c) for c in text)
+    return "".join(html_escape_table.get(c, c) for c in text)
 
+def get_field(b, *keys):
+    """Return first matching field value, or None."""
+    for k in keys:
+        if k in b and len(str(b[k]).strip()) > 0:
+            return str(b[k]).strip()
+    return None
 
-keylist = list(publist.keys())
-pubsource = "journal"
-parser = bibtex.Parser()
-bibdata = parser.parse_file(publist[pubsource]["file"])
-
-#loop through the individual references in a given bibtex file
-for bib_id in bibdata.entries:
-        #reset default date
-# =============================================================================
-#         pub_year = "1900"
-#         pub_month = "01"
-# =============================================================================
-    pub_day = "01"
-        
-    b = bibdata.entries[bib_id].fields
-        
-    try:
-        date = f'{b["date"]}'.split('-')
-        pub_year = date[0]
-        pub_month = date[1]
-
-# =============================================================================
-#             #todo: this hack for month and day needs some cleanup
-#             if "month" in b.keys(): 
-#                 if(len(b["month"])<3):
-#                     pub_month = "0"+b["month"]
-#                     pub_month = pub_month[-2:]
-#                 elif(b["month"] not in range(12)):
-#                     tmnth = strptime(b["month"][:3],'%b').tm_mon   
-#                     pub_month = "{:02d}".format(tmnth) 
-#                 else:
-#                     pub_month = str(b["month"])
-#             if "day" in b.keys(): 
-#                 pub_day = str(b["day"])
-# =============================================================================
-
-                
-        pub_date = pub_year+"-"+pub_month+"-"+pub_day
-#            pub_date = pub_year+"-"+pub_month
-        
-        #strip out {} as needed (some bibtex entries that maintain formatting)
-        clean_title = b["title"].replace("{", "").replace("}","").replace("\\","").replace(" ","-")    
-
-        url_slug = re.sub("\\[.*\\]|[^a-zA-Z0-9_-]", "", clean_title)
-        url_slug = url_slug.replace("--","-")
-
-        md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
-        html_filename = (str(pub_date) + "-" + url_slug).replace("--","-")
-
-        #Build Citation from text
-        citation = ""
-
-        #citation authors - todo - add highlighting for primary author?
-        for author in bibdata.entries[bib_id].persons["author"]:
-            citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
-
-        #citation title
-        citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
-
-        #add venue logic depending on citation type
-        venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["keywords"]].replace("{", "").replace("}","").replace("\\","")
-
-        citation = citation + " " + html_escape(venue)
-        citation = citation + ", " + pub_year + "."
-
-        
-        ## YAML variables
-        md = "---\ntitle: \""   + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + '"\n'
-        
-        md += """collection: """ +  publist[pubsource]["collection"]["name"] + '\n'
-        md += """type: """ + "\""+ publist[pubsource]["collection"]["type"] + "\""
-        
-
-        md += """\npermalink: """ + publist[pubsource]["collection"]["permalink"]  + html_filename
-        
-        abstract = False
-        if "abstract" in b.keys():
-            if len(str(b["abstract"])) > 5:
-                md += "\nexcerpt: '" + html_escape(b["abstract"]) + "'"
-                note = True
-
-        md += "\ndate: " + str(pub_date) 
-
-        md += "\nvenue: '" + html_escape(venue) + "'"
-        
-        url = False
-        if "url" in b.keys():
-            if len(str(b["url"])) > 5:
-                md += "\npaperurl: '" + b["url"] + "'"
-                url = True
-
-        md += "\ncitation: '" + html_escape(citation) + "'"
-
-        md += "\n---"
-
-        
-        ## Markdown description for individual page
-        if abstract:
-            md += "\n" + html_escape(b["abstract"])
-            
-
-        if url:
-            md += "\n[Read more](" + b["url"] + "){:target=\"_blank\"}\n" 
-#            else:
-#                md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
-
-        md_filename = os.path.basename(md_filename)
-
-        with open("../_publications/" + md_filename, 'w') as f:
-            f.write(md)
-        print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
-    # field may not exist for a reference
-    except KeyError as e:
-        print(f'WARNING Missing Expected Field {e} from entry {bib_id}: \"', b["title"][:30],"..."*(len(b['title'])>30),"\"")
+for pubsource, meta in publist.items():
+    if not os.path.exists(meta["file"]):
+        print(f'Skipping {pubsource}: file {meta["file"]} not found')
         continue
+
+    parser = bibtex.Parser()
+    bibdata = parser.parse_file(meta["file"])
+
+    for bib_id in bibdata.entries:
+        b = bibdata.entries[bib_id].fields
+        pub_day = "01"
+
+        try:
+            date_parts = str(b["date"]).split("-")
+            pub_year = date_parts[0]
+            pub_month = date_parts[1] if len(date_parts) > 1 else "01"
+            pub_date = f"{pub_year}-{pub_month}-{pub_day}"
+
+            clean_title = b["title"].replace("{", "").replace("}", "").replace("\\", "").replace(" ", "-")
+            url_slug = re.sub(r"\[.*\]|[^a-zA-Z0-9_-]", "", clean_title).replace("--", "-")
+            md_filename = f"{pub_date}-{url_slug}.md".replace("--", "-")
+            html_filename = f"{pub_date}-{url_slug}".replace("--", "-")
+
+            # Authors list
+            authors = []
+            for author in bibdata.entries[bib_id].persons.get("author", []):
+                first = " ".join(author.first_names)
+                last = " ".join(author.last_names)
+                authors.append(f"{first} {last}")
+
+            # Citation string (title shown separately, so omitted here)
+            title_clean = b["title"].replace("{", "").replace("}", "").replace("\\", "")
+            venue_raw = meta["venue-pretext"] + b.get(meta["keywords"], "").replace("{", "").replace("}", "").replace("\\", "")
+            citation = " ".join(f"{a}," for a in authors)
+            citation += f' {html_escape(venue_raw)}, {pub_year}.'
+
+            # Optional fields
+            doi    = get_field(b, "doi")
+            arxiv  = get_field(b, "eprint") if get_field(b, "eprinttype", "archiveprefix") in ("arXiv", "arxiv", None) else None
+            url    = get_field(b, "url")
+            abstract = get_field(b, "abstract")
+
+            ## Build YAML front matter
+            md  = f'---\ntitle: "{html_escape(title_clean)}"\n'
+            md += f'collection: {meta["collection"]["name"]}\n'
+            md += f'type: "{meta["collection"]["type"]}"\n'
+            md += f'permalink: {meta["collection"]["permalink"]}{html_filename}\n'
+            md += f'date: {pub_date}\n'
+            md += f'venue: \'{html_escape(venue_raw)}\'\n'
+
+            # Authors as YAML list
+            md += 'authors:\n'
+            for a in authors:
+                md += f'  - "{html_escape(a)}"\n'
+
+            if doi:
+                md += f'doi: "{doi}"\n'
+            if arxiv:
+                md += f'arxiv: "{arxiv}"\n'
+            if url:
+                md += f'paperurl: \'{url}\'\n'
+            if abstract:
+                md += f'excerpt: \'{html_escape(abstract)}\'\n'
+
+            md += f'citation: \'{html_escape(citation)}\'\n'
+            md += '---\n'
+
+            # Page body
+            if abstract:
+                md += f'\n{html_escape(abstract)}\n'
+            if url:
+                md += f'\n[Read more]({url}){{:target="_blank"}}\n'
+
+            out_path = os.path.join("..", "_publications", os.path.basename(md_filename))
+            with open(out_path, "w") as f:
+                f.write(md)
+            print(f'OK  {bib_id}: "{b["title"][:60]}{"..." if len(b["title"]) > 60 else ""}"')
+
+        except KeyError as e:
+            print(f'WARN  missing field {e} in {bib_id}: "{b.get("title", "?")[:40]}"')
+            continue

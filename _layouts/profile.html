@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <div class="profile-page">
+
+    <header class="profile-header">
+      <h1 class="profile-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+        <p class="profile-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+    </header>
+
+    <hr class="profile-divider">
+
+    <div class="profile-content">
+      {{ content }}
+    </div>
+
+  </div>
+</div>

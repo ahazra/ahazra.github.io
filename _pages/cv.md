@@ -1,60 +1,60 @@
 ---
-layout: archive
-[//]: # title: "CV"
+layout: single
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
-{% include base_path %}
+Ramanujan Faculty Fellow (ANRF, Government of India), Department of Mechanical Engineering, IIT Palakkad. A detailed PDF CV is available on request.
+## Academic Positions
 
+**Ramanujan Faculty Fellow (ANRF, Government of India)**  
+Department of Mechanical Engineering, IIT Palakkad  
+*February 2023 – Present*
 
-## Work Experience
+**Assistant Professor**  
+Department of Mechanical Engineering, GITAM (Deemed to be University)  
+*September 2022 – February 2023*
 
-- Ramanujan Faculty Fellow (Feb, 2023 - ): Mechanical Engineering, IIT Palakkad
-
-- Assistant Professor (Sep, 2022 - Feb, 2023):  Mechanical Engineering, GITAM University  
-
-
-- Post-doctoral Fellow (May, 2021 - Apr, 2022): University of the Basque Country (UPV/EHU), Leioa, Basque Country, Spain   
-<!--- I worked in the group led by David Pardo on the topic of *Deep learning-based inversion for geosteering* --->
-
-- Post-doctoral Fellow (Feb, 2020 - Mar, 2021): Basque Center for Applied Mathematics , Bilbao, Spain  
-
-<!--- I worked in the group led by David Pardo on the topic of *Deep learning-based inversion for geosteering* --->
-
-- Post-doctoral Fellow (Jan, 2018 - Jan, 2020): Centre for Applicable Mathematics, TIFR, Bengaluru, India  
-
-<!--- I worked in the group led by Praveen Chandrashekar on --->
-
-- Post-doctoral Fellow (Nov, 2016 - Oct, 2017):Georg-August-University, G&ouml;ttingen, Germany 
-
-- Doctoral Researcher (Aug, 2012 - Oct, 2016): Biomed NMR, Max Planck Institute for Biophysical Chemistry (Now, Multidisciplinary Sciences)**  
-
-
+---
 
 ## Education
-- Ph.D., Mathematical Sciences (Apr, 2013 - Oct, 2016): Georg-August-University, G&ouml;ttingen
 
-    * Thesis: *Numerical Simulation of Bloch Equations for Dynamic Magnetic Resonance
-Imaging*  
+**Ph.D. in Mathematical Sciences**  
+Georg-August University and Max-Planck Institute for Biophysical Chemistry (Now Multidisciplinary Sciences), Göttingen, Germany  
+*April 2013 – October 2016*  
 
-    * Supervisors: Prof. Dr. Jens Frahm & Prof. Dr. Gert Lube
+**Thesis:** *Numerical Simulation of Bloch Equations for Dynamic Magnetic Resonance Imaging*  
+**Supervisors:** Prof. Dr. Jens Frahm and Prof. Dr. Gert Lube
 
-- M.Tech, Mechanical Engineering (Jul, 2009 - Aug, 2011): Indian Instittute of Technology, Kanpur 
+**M.Tech. in Mechanical Engineering**  
+Indian Institute of Technology Kanpur  
+*July 2009 – August 2011*
 
+**B.M.E. in Mechanical Engineering**  
+Jadavpur University, Kolkata  
+*July 2003 – June 2007*
 
-- B.M.E, Mechanical Engineering (Jul, 2003 - Jun, 2007): Jadavpur University, Kolkata 
+---
 
+## Postdoctoral Research Experience
 
+Postdoctoral Fellow, University of the Basque Country (UPV/EHU), Spain *(2021–2022)*  
+Postdoctoral Fellow, Basque Center for Applied Mathematics (BCAM), Spain *(2020–2021)*  
+Postdoctoral Fellow, TIFR Centre for Applicable Mathematics, Bengaluru *(2018–2020)*  
+Postdoctoral Fellow, Georg-August University Göttingen, Germany *(2016–2017)*
 
-## Research visits
+---
 
-- Visiting postdoctoral fellow (Sep, 2018 - Dec, 2018, Jul, 2019 - Oct, 2019): Department of Physics and Applied Mathematics, University of Notre Dame
+## Research Visits
 
-    - Host: Prof. Dinshaw S. Balsara
+**Visiting Postdoctoral Fellow**  
+Department of Physics and Applied Mathematics, University of Notre Dame, USA  
+*September 2018 – December 2018; July 2019 – October 2019*  
 
+**Host:** Prof. Dinshaw S. Balsara
 
-  
-  
+<style>
+h2 { margin-top: 2.2rem; }
+p { margin-bottom: 0.4rem; }
+em { color: #6b7280; }
+</style>

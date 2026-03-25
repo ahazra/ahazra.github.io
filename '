@@ -1,0 +1,124 @@
+---
+layout: single
+title: ""
+permalink: /
+excerpt: "About me"
+author_profile: true
+redirect_from:
+  - /about/
+  - /about.html
+---
+
+<style>
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0 1.8rem;
+}
+.research-card {
+  background: #1a2332;
+  border: 1px solid #2d3f55;
+  border-left: 3px solid #60a5fa;
+  border-radius: 5px;
+  padding: 1rem 1.1rem;
+}
+.research-card.future { border-left-color: #818cf8; }
+.research-card.methods { border-left-color: #34d399; }
+.research-card h4 {
+  margin: 0 0 0.45rem;
+  font-size: 0.88em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+.research-card.methods h4 { color: #6ee7b7; }
+.research-card.future h4  { color: #a5b4fc; }
+.research-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.88em;
+  color: #d1d5db;
+  line-height: 1.65;
+}
+.research-card ul li { margin-bottom: 0.15rem; }
+.positions-box {
+  background: #1a2332;
+  border: 1px solid #2d3f55;
+  border-left: 3px solid #fbbf24;
+  border-radius: 5px;
+  padding: 0.9rem 1.1rem;
+  margin-top: 1.6rem;
+  font-size: 0.9em;
+}
+.positions-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.88em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcd34d;
+}
+.positions-box p { margin: 0.2rem 0; color: #d1d5db; line-height: 1.6; }
+.positions-box a { color: #93c5fd; }
+</style>
+I am a Ramanujan Faculty Fellow in the [Department of Mechanical Engineering](https://iitpkd.ac    .in/mechanical-engineering)
+ at [Indian Institute of Technology Palakkad]
+. My work lies at the intersection of computational science, applied mathematics, and engineering, with a focus on developing mathematical and computational methods for complex physical and engineering systems governed by partial differential equations.
+
+My research combines mathematical modeling, numerical methods, and scientific machine learning to address forward and inverse problems in areas such as thermo-fluid systems, electromagnetics, and other multi-physics phenomena. A central goal of my work is to develop reliable computational tools for understanding, monitoring, and predicting the behavior of complex physical systems.
+
+Beyond research, I am interested in teaching, mentoring students, and developing computational approaches that connect mathematical theory with data and engineering applications.
+I am a **Ramanujan Faculty Fellow** in the [Department of Mechanical Engineering](https://iitpkd.ac.in/mechanical-engineering), [IIT Palakkad](https://iitpkd.ac.in/). My research develops **computational and data-driven methods for engineering systems governed by PDEs**, with a current focus on inverse problems in thermo-fluid and electromagnetic settings. I bring primary expertise in high-order numerical methods for hyperbolic PDEs, built through work on flow MRI, computational electrodynamics, and MHD.
+
+## Research at a Glance
+
+<div class="research-grid">
+
+<div class="research-card">
+<h4>Inverse Problems</h4>
+<ul>
+  <li>Deterministic &amp; Bayesian formulations</li>
+  <li>Classical regularisation (Tikhonov, TV)</li>
+  <li>Data-driven &amp; physics-informed approaches</li>
+  <li>Applications: geophysics, thermo-fluids, MRI</li>
+</ul>
+</div>
+
+<div class="research-card methods">
+<h4>Numerical Methods for PDEs</h4>
+<ul>
+  <li>High-order Discontinuous Galerkin schemes</li>
+  <li>Globally constraint-preserving methods</li>
+  <li>Flow MRI &amp; Bloch equation simulation</li>
+  <li>Computational electrodynamics &amp; MHD</li>
+</ul>
+</div>
+
+<div class="research-card future">
+<h4>Future Directions</h4>
+<ul>
+  <li>Aeroacoustics &amp; wave propagation</li>
+  <li>Scientific machine learning for PDEs</li>
+  <li>Physics-informed neural networks (PINNs)</li>
+  <li>Uncertainty quantification</li>
+</ul>
+</div>
+
+</div>
+
+<div class="positions-box">
+<h3>Open Positions</h3>
+<p>
+I am actively looking for motivated students and researchers to join the group at IIT Palakkad.
+</p>
+<p>
+<strong>M.S. (Research) &amp; Ph.D.</strong> — positions available in computational inverse problems and scientific machine learning. Candidates with a background in mathematics, mechanical/aerospace engineering, or computational physics are encouraged to apply through the <a href="https://iitpkd.ac.in/admissions">IIT Palakkad admissions portal</a>.
+</p>
+<p>
+<strong>B.Tech. / M.Tech. Projects</strong> — IIT Palakkad students interested in thesis or project work are welcome to get in touch directly by email.
+</p>
+<p>
+<strong>Postdoctoral Positions</strong> — no funded openings currently, but strong candidates are encouraged to reach out to discuss fellowship options (SERB-NPDF, NBHM, etc.).
+</p>
+</div>
+

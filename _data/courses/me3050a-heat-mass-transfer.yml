@@ -1,0 +1,6 @@
+# Add materials here. Each entry needs: title, file (path under /assets/courses/me3050a-heat-mass-transfer/)
+# Example:
+# - title: "Lecture 1 – Introduction"
+#   file: "lecture01.pdf"
+
+materials: []

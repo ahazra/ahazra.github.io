@@ -7,6 +7,6 @@ excerpt: 'With recent advancements of image reconstruction techniques, magnetic 
 date: 2016-01-01
 venue: 'Georg-August-Universität Göttingen'
 paperurl: 'http://dx.doi.org/10.53846/goediss-6202'
-citation: ' Arijit Hazra, &quot;Numerical Simulation of Bloch Equations for Dynamic Magnetic Resonance Imaging.&quot; Georg-August-Universität Göttingen, 2016.'
+citation: 'Arijit Hazra, Georg-August-Universität Göttingen, 2016.'
 ---
 [Read more](http://dx.doi.org/10.53846/goediss-6202){:target="_blank"}

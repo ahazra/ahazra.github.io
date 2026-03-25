@@ -1,0 +1,8 @@
+# Add materials here. Each entry needs: title, file (path under /assets/courses/me5614-cfd/)
+# Example:
+# - title: "Lecture 1 – Introduction to CFD"
+#   file: "lecture01.pdf"
+# - title: "Assignment 1"
+#   file: "assignment01.pdf"
+
+materials: []
