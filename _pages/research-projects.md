@@ -121,7 +121,8 @@ Our primary focus is on thermal and fluid systems, though we remain genuinely op
 <div class="rp-card em">
 <div class="rp-card-header">
 <h3>High-Order Structure-Preserving Schemes for Computational Electrodynamics and MHD</h3>
-<span class="badge badge-active">Active</span>
+<!--- <span class="badge badge-active">Active</span> --->
+<span class="badge badge-past">Past / Continuing</span>
 </div>
 <p>
 A central interest of our group is the development of numerical schemes for partial differential equations that faithfully mimic the structure of the underlying physical laws -- not merely in accuracy, but in the preservation of fundamental mathematical and physical properties.</p>
@@ -150,43 +151,55 @@ A central interest of our group is the development of numerical schemes for part
 </ul>
 </div>
 
-<!--
 <div class="rp-card geo">
 <div class="rp-card-header">
 <h3>Deep Learning for Geophysical Inverse Problems</h3>
 <span class="badge badge-past">Past / Continuing</span>
 </div>
 <p>
-Borehole logging tools must infer subsurface formation properties from electromagnetic measurements taken while drilling. This project combined physics-based forward modelling of logging-while-drilling (LWD) instruments with deep neural networks trained to solve the resulting inverse problem in near-real time — enabling geosteering decisions that would otherwise require iterative forward solves. The data-driven framework learned a direct mapping from tool responses to formation parameters, significantly accelerating the inversion.
+Geosteering--subsurface characterization using borehole electromagnetic resistivity measurements from logging-while-drilling (LWD) instruments -- is one of the major techniques employed in subsurface characterization, natural resource extraction, geothermal exploration, and CO₂ sequestration. Classical regularization-based inversion methods, while reliable, are too slow for the near-real-time decisions that geosteering demands.
+We adopted and applied deep neural network (DNN) based inversion methods that learn a direct mapping from electromagnetic measurements to subsurface properties offline, reducing evaluation time from minutes to fractions of a second. Building on an existing two-step training strategy combining forward model approximation with data-misfit minimization, we developed a greedy instrument design algorithm that selects a minimal set of measurement types sufficient for accurate subsurface characterization.
+Ongoing directions include recasting the inversion as a statistical inference problem -- using variational autoencoders and generative models to estimate both subsurface properties and their associated uncertainties, without the computational cost of traditional MCMC methods.
 </p>
 <h4>Methods &amp; Tools</h4>
 <ul>
-  <li>Finite-element forward modelling of LWD tools</li>
-  <li>Deep fully-connected and convolutional networks</li>
-  <li>Training on synthetic forward-model datasets</li>
-  <li>Sensitivity &amp; uncertainty analysis</li>
+  <li>1D Hankel transform-based forward modelling of borehole electromagnetic measurements</li>
+  <li>Deep neural network-based inversion</li>
+  <li>Two-step training with data-misfit minimisation</li>
+  <li>Greedy algorithm for optimal instrument design</li>
+  <li>Variational autoencoders and generative models for statistical inversion</li>
+  <li>Uncertainty quantification via Bayesian inference</li>
 </ul>
+<h4>Students & Staff</h4>
+<ul>
+    <li>Manas K. Sinha -- M.Tech (Computing and Mathematics) </li>
+  </ul>
+<h4>Collaborators</h4>
+<ul>
+    <li> Prof. David Pardo -- Basque Centre for Applied Mathematics (BCAM), University of Basque Country </li>
+  </ul>
 <h4>Selected Papers</h4>
 <ul>
   <li><a href="/publication/2022-03-01-A-deep-learning-approach-to-design-a-borehole-instrument-for-geosteering">A Deep Learning Approach to Design a Borehole Instrument for Geosteering (2022)</a></li>
 </ul>
 </div>
--->
-<!--
 <div class="rp-card mri">
 <div class="rp-card-header">
 <h3>Real-Time MRI Simulation</h3>
 <span class="badge badge-past">Past</span>
 </div>
 <p>
-Real-time MRI of moving objects (flowing blood, beating hearts) requires accurate simulation of the Bloch equations in the presence of velocity fields. This project developed efficient numerical solvers for the Bloch equations that account for flow-induced phase effects, enabling faithful virtual prototyping of MRI pulse sequences. The methods were validated against experimental data and applied to dynamic reconstruction scenarios, providing quantitative insight into artefacts caused by motion and flow.
+The Bloch equations govern the evolution of nuclear magnetization and form the mathematical foundation of magnetic resonance imaging (MRI). My doctoral work focused on numerical simulation of the Bloch equations for flowing objects -- with the goal of enabling quantitative estimation of fluid flow velocities and flow rates from MR magnitude signals acquired in standard clinical sequences.
+The governing equation, cast as a vector-valued reactive transport PDE, was solved using an operator splitting approach -- separating the transport and reaction terms and treating each with appropriate numerical methods. High-resolution finite volume methods (FVM) handled magnetization transport, while the magnetic resonance phenomena were resolved through further splitting. The simulator was validated against in vitro experiments and applied to Couette, laminar, and pulsatile flows.
+Subsequent work established the well-posedness of the modified Bloch model for flowing objects and explored accuracy improvements using a Discontinuous Galerkin FEM (DGFEM) scheme.
 </p>
 <h4>Methods &amp; Tools</h4>
 <ul>
-  <li>Numerical integration of the Bloch ODE system</li>
-  <li>Flow-effect modelling (gradient moment nulling)</li>
-  <li>Dynamic MRI reconstruction algorithms</li>
-  <li>Validation against phantom &amp; in-vivo data</li>
+  <li>Bloch equation modelling for flowing objects</li>
+  <li>Operator splitting for reactive transport PDEs</li>
+  <li>High-resolution finite volume methods (FVM) and Discontinuous Galerkin FEM (DGFEM)</li>
+  <li>CUDA-enabled GPU parallelisation</li>
+  <li>Well-posedness analysis of modified Bloch model</li>
 </ul>
 <h4>Selected Papers</h4>
 <ul>
