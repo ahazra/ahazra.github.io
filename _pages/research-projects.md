@@ -77,7 +77,7 @@ author_profile: true
 .rp-card.mri a { color: #a5b4fc; }
 </style>
 
-Our work sits at the intersection of computational science, engineering, and applied mathematics,  and runs in two directions. The first is the use of classical and physics-informed machine learning methods for inverse problems -- recovering what cannot be directly measured from what can -- with thermal and fluid systems as our primary ground, though the questions travel further. The second is the development of structure-preserving high-order numerical schemes for PDEs -- methods that respect the deep mathematical structure of the underlying physics.
+Our work draws from computational science, applied mathematics, and engineering and runs in two directions. The first is the use of classical and physics-informed machine learning methods for inverse problems -- recovering what cannot be directly measured from what can -- with thermal and fluid systems as our primary ground, though the questions travel further. The second is the development of structure-preserving high-order numerical schemes for PDEs -- methods that respect the deep mathematical structure of the underlying physics.
 
 <div class="rp-grid">
 

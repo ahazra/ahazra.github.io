@@ -61,7 +61,7 @@ redirect_from:
 .positions-box p { margin: 0.2rem 0; color: #d1d5db; line-height: 1.6; }
 .positions-box a { color: #93c5fd; }
 </style>
-I am a Ramanujan Faculty Fellow in the [Department of Mechanical Engineering](https://iitpkd.ac    .in/mechanical-engineering) at [Indian Institute of Technology Palakkad](https://iitpkd.ac.in/). My research sits at the intersection of computational science, engineering, and applied mathematics -- focused on building mathematical and computational methods for physical systems governed by partial differential equations. 
+I am a Ramanujan Faculty Fellow in the [Department of Mechanical Engineering](https://iitpkd.ac    .in/mechanical-engineering) at [Indian Institute of Technology Palakkad](https://iitpkd.ac.in/). My research lives at the boundary of computational science, engineering, and applied mathematics -- focused on building mathematical and computational methods for physical systems governed by partial differential equations. 
 
 In practice, this means combining numerical simulation, mathematical modeling, and scientific machine learning to understand and solve forward and inverse problems across thermo-fluid systems, electromagnetics, and multi-physics phenomena. The underlying ambition is simple: to develop tools that make complex physical systems legible -- amenable to monitoring, prediction, and understanding.
 
