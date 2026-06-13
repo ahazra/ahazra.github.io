@@ -193,7 +193,7 @@ Beyond research, I enjoy teaching, mentoring, and conversations that wander well
 I am actively looking for motivated students and researchers to join the group at IIT Palakkad.
 </p>
 <p>
-<strong>M.S. (Research) &amp; Ph.D.</strong> -- Positions are available in computational modeling and scientific machine learning for thermo-fluid and other multi-physics systems. Candidates with a background in mechanical or aerospace engineering, mathematics, or computational physics are encouraged to apply through the <a href="https://iitpkd.ac.in/admissions">IIT Palakkad admissions portal</a>.
+<strong>M.S. (Research) &amp; Ph.D.</strong> -- Positions are available in computational modeling and scientific machine learning for thermo-fluid and other multi-physics systems. Candidates with a background in mechanical or aerospace engineering, or applied mathematics are encouraged to apply through the <a href="https://iitpkd.ac.in/admissions">IIT Palakkad admissions portal</a>.
 </p>
 <p>
 <strong>B.Tech. / M.Tech. Projects</strong> -- IIT Palakkad students interested in thesis or project work are welcome to get in touch directly by email.
