@@ -1,0 +1,12 @@
+---
+---
+{% assign _yr = entry.date | split: "/" | last | slice: 0, 4 %}
+{% assign _venue = entry.journaltitle | default: entry.booktitle | default: entry.institution %}
+<div class="bib-entry" style="margin: 0.25rem 0; padding: 0.3rem 0; font-size: 0.88em; color: #d1d5db; line-height: 1.5; border-top: 1px solid #1f2d3f;">
+  <span style="font-weight: 600; color: #e2e8f0;">{{ entry.title }}</span>
+  &mdash; <span style="color: #9ca3af;">{{ entry.author }}</span>.
+  {% if _venue %}<em style="color: #6b7280;">{{ _venue }}</em>{% endif %}{% if entry.volume %} <span style="color: #6b7280;">{{ entry.volume }}</span>{% endif %}{% if entry.pages %}<span style="color: #6b7280;">, pp. {{ entry.pages }}</span>{% endif %}{% if _yr %} <span style="color: #6b7280;">({{ _yr }})</span>{% endif %}.
+  {% if entry.doi %}<a href="https://doi.org/{{ entry.doi }}" target="_blank" style="font-size:0.8em; padding:0.05em 0.4em; border-radius:3px; background:rgba(96,165,250,0.15); color:#93c5fd; text-decoration:none; white-space:nowrap;">[DOI]</a>{% endif %}
+  {% if entry.eprint %}<a href="https://arxiv.org/abs/{{ entry.eprint }}" target="_blank" style="font-size:0.8em; padding:0.05em 0.4em; border-radius:3px; background:rgba(251,191,36,0.15); color:#fcd34d; text-decoration:none; white-space:nowrap;">[arXiv]</a>{% endif %}
+  {% if entry.url and entry.doi == nil %}<a href="{{ entry.url }}" target="_blank" style="font-size:0.8em; padding:0.05em 0.4em; border-radius:3px; background:rgba(52,211,153,0.15); color:#6ee7b7; text-decoration:none; white-space:nowrap;">[PDF]</a>{% endif %}
+</div>

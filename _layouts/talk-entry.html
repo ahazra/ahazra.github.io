@@ -1,0 +1,6 @@
+---
+---
+{% assign _d = entry.date | split: "/" | last %}
+<div class="bib-entry" style="margin: 0.25rem 0; padding: 0.3rem 0; font-size: 0.88em; color: #d1d5db; line-height: 1.5; border-top: 1px solid #1f2d3f;">
+  <span style="font-weight: 600; color: #e2e8f0;">{{ entry.title }}</span>{% if entry.note %} &mdash; <em style="color: #9ca3af;">{{ entry.note }}</em>{% endif %}{% if entry.location %}, <span style="color: #6b7280;">{{ entry.location }}</span>{% endif %}{% if _d %} <span style="color: #6b7280;">({{ _d | slice: 0, 10 }})</span>{% endif %}.
+</div>

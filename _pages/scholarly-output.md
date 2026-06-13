@@ -7,68 +7,41 @@ redirect_from:
   - /talks/
 ---
 
-Publications, theses, and technical reports -- organised by type, with links to DOI, arXiv, and PDF where available.
+<style>
+h2 { margin-top: 1.8rem; margin-bottom: 0.5rem; font-size: 1.05em; }
+hr { margin: 0.6rem 0 1rem; border-color: #2d3f55; }
+</style>
 
-{% include base_path %}
+Publications, theses, and technical reports — organised by type, with links to DOI, arXiv, and PDF where available.
 
-{% if author.googlescholar %}
-You can also find my articles on <a href="{{ author.googlescholar }}">my Google Scholar profile</a>.
+{% if site.author.googlescholar %}
+Also on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.
 {% endif %}
 
 ## Journal Publications
 
-{% for post in site.publications reversed %}
-  {% if post.type == "journal" %}
-    {% include archive-single-cv.html %}
-  {% endif %}
-{% endfor %}
+{% bibliography --file publications --query @article --sort_by date --order descending %}
 
 ---
 
 ## Conference Proceedings
 
-{% for post in site.publications reversed %}
-  {% if post.type == "conference" %}
-    {% include archive-single-cv.html %}
-  {% endif %}
-{% endfor %}
+{% bibliography --file publications --query @inproceedings --sort_by date --order descending %}
 
 ---
 
 ## Doctoral Thesis
 
-{% for post in site.publications reversed %}
-  {% if post.type == "thesis" %}
-    {% include archive-single-cv.html %}
-  {% endif %}
-{% endfor %}
+{% bibliography --file publications --query @thesis --sort_by date --order descending %}
 
 ---
 
 ## Seminars and Invited Talks
 
-{% for post in site.talks reversed %}
-  {% if post.type == "Seminar" %}
-    {% include archive-single-talk-cv.html %}
-  {% endif %}
-{% endfor %}
+{% bibliography --file talks --query @unpublished[keywords~=Seminar] --template talk-entry --sort_by date --order descending %}
 
 ---
 
-## Conferences
+## Conference Talks
 
-{% if site.talkmap_link == true %}
-See a map of all the places I've given a talk.
-{% endif %}
-
-{% for post in site.talks reversed %}
-  {% if post.type == "Conference" or post.type == "Poster" %}
-    {% include archive-single-talk-cv.html %}
-  {% endif %}
-{% endfor %}
-
-<style>
-h2 { margin-top: 1.6rem; margin-bottom: 0.4rem; font-size: 1.1em; }
-hr { margin: 0.8rem 0; }
-p { margin-bottom: 0.2rem; }
-</style>
+{% bibliography --file talks --query @unpublished[keywords~=Conference] --template talk-entry --sort_by date --order descending %}
