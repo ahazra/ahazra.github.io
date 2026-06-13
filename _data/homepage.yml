@@ -1,0 +1,7 @@
+# Order of sections on the homepage (below the bio).
+# Reorder these three lines to change what appears first.
+# Available values: news | research | positions
+sections:
+   - positions
+   - news
+   - research

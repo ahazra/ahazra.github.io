@@ -80,3 +80,27 @@ date: YYYY-MM-DD
 location: "City, Country"
 ---
 ```
+
+**New news item** — prepend an entry to `_data/news.yml` (newest first):
+```yaml
+items:
+  - date: "YYYY-MM-DD"
+    category: paper        # paper | conference | award | general
+    text: "One-line description of the update."
+    url: "https://..."     # leave "" if no link
+```
+Badge colours by category: `paper` → blue, `conference` → emerald, `award` → amber, `general` → indigo.
+The news box on the homepage is scrollable (150 px max-height); all items in the list are shown.
+
+## Homepage layout
+
+Section order is controlled by `_data/homepage.yml`. Reorder the three lines to change what appears first below the bio:
+
+```yaml
+sections:
+  - news        # Recent News box (scrollable)
+  - research    # Research at a Glance cards
+  - positions   # Open Positions box
+```
+
+Any permutation of the three values is valid. Changes require a Jekyll rebuild to take effect locally (`bundle exec jekyll serve --livereload` picks them up automatically on save).

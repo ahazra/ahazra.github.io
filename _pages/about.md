@@ -10,11 +10,16 @@ redirect_from:
 ---
 
 <style>
+.research-section { margin-top: 1.6rem; }
+.research-section h2 {
+  font-size: 1em;
+  margin: 0 0 0.9rem;
+}
 .research-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
-  margin: 1.4rem 0 1.8rem;
+  margin: 0 0 0.4rem;
 }
 .research-card {
   background: #1a2332;
@@ -60,15 +65,89 @@ redirect_from:
 }
 .positions-box p { margin: 0.2rem 0; color: #d1d5db; line-height: 1.6; }
 .positions-box a { color: #93c5fd; }
+.news-box {
+  background: #1a2332;
+  border: 1px solid #2d3f55;
+  border-left: 3px solid #60a5fa;
+  border-radius: 5px;
+  padding: 0.9rem 1.1rem;
+  margin-top: 1.6rem;
+}
+.news-box h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.88em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+.news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.22rem 0;
+  font-size: 0.88em;
+  color: #d1d5db;
+  line-height: 1.5;
+  border-top: 1px solid #1f2d3f;
+}
+.news-item:first-of-type { border-top: none; }
+.news-date {
+  flex-shrink: 0;
+  width: 5.2em;
+  color: #6b7280;
+  font-size: 0.92em;
+}
+.news-badge {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 0.05em 0.45em;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.news-badge.paper      { background: rgba(96,165,250,0.15); color: #93c5fd; }
+.news-badge.conference { background: rgba(52,211,153,0.15); color: #6ee7b7; }
+.news-badge.award      { background: rgba(251,191,36,0.15);  color: #fcd34d; }
+.news-badge.general    { background: rgba(129,140,248,0.15); color: #a5b4fc; }
+.news-text a { color: #93c5fd; }
+.news-scroll {
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 0.3rem;
+}
+.news-scroll::-webkit-scrollbar { width: 4px; }
+.news-scroll::-webkit-scrollbar-track { background: #1a2332; }
+.news-scroll::-webkit-scrollbar-thumb { background: #2d3f55; border-radius: 2px; }
+.news-scroll::-webkit-scrollbar-thumb:hover { background: #60a5fa; }
 </style>
-I am a Ramanujan Faculty Fellow in the [Department of Mechanical Engineering](https://iitpkd.ac    .in/mechanical-engineering) at [Indian Institute of Technology Palakkad](https://iitpkd.ac.in/). My research lives at the boundary of computational science, engineering, and applied mathematics -- focused on building mathematical and computational methods for physical systems governed by partial differential equations. 
+
+I am a Ramanujan Faculty Fellow in the [Department of Mechanical Engineering](https://iitpkd.ac.in/mechanical-engineering) at [Indian Institute of Technology Palakkad](https://iitpkd.ac.in/). My research lives at the boundary of computational science, engineering, and applied mathematics -- focused on building mathematical and computational methods for physical systems governed by partial differential equations.
 
 In practice, this means combining numerical simulation, mathematical modeling, and scientific machine learning to understand and solve forward and inverse problems across thermo-fluid systems, electromagnetics, and multi-physics phenomena. The underlying ambition is simple: to develop tools that make complex physical systems legible -- amenable to monitoring, prediction, and understanding.
 
 Beyond research, I enjoy teaching, mentoring, and conversations that wander well beyond science. My door is open.
 
-## Research at a Glance
+{% for section in site.data.homepage.sections %}
 
+{% if section == "news" %}
+<div class="news-box">
+<h3>Recent News</h3>
+<div class="news-scroll">
+{% for item in site.data.news.items %}
+<div class="news-item">
+  <span class="news-date">{{ item.date | date: "%b %Y" }}</span>
+  <span class="news-badge {{ item.category }}">{{ item.category }}</span>
+  <span class="news-text">{% if item.url != "" %}<a href="{{ item.url }}">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}</span>
+</div>
+{% endfor %}
+</div>
+</div>
+
+{% elsif section == "research" %}
+<div class="research-section">
+<h2>Research at a Glance</h2>
 <div class="research-grid">
 
 <div class="research-card">
@@ -76,7 +155,7 @@ Beyond research, I enjoy teaching, mentoring, and conversations that wander well
 <ul>
   <li>Deterministic and Bayesian approaches for unknown parameters in PDE-based models</li>
   <li>Regularization methods for stable recovery from sparse and noisy measurements</li>
-<li>State estimation and real-time monitoring of physical systems</li>
+  <li>State estimation and real-time monitoring of physical systems</li>
   <li>Digital twins for thermo-fluid and multi-physics systems</li>
   <li>Applications in thermo-fluid, other engineering, and biological systems</li>
 </ul>
@@ -88,8 +167,8 @@ Beyond research, I enjoy teaching, mentoring, and conversations that wander well
   <li>High-order discretization methods for PDEs (e.g. Discontinuous Galerkin)</li>
   <li>Structure- and constraint-preserving numerical schemes</li>
   <li>Applications in fluid flow, electromagnetics, MHD, and flow MRI</li>
-<li>Time integration and solver strategies for stiff problems</li>
-<li>Scalable solvers and high-performance computing for large-scale PDE systems</li>
+  <li>Time integration and solver strategies for stiff problems</li>
+  <li>Scalable solvers and high-performance computing for large-scale PDE systems</li>
 </ul>
 </div>
 
@@ -98,14 +177,16 @@ Beyond research, I enjoy teaching, mentoring, and conversations that wander well
 <ul>
   <li>Scientific machine learning and physics-informed neural networks for PDEs</li>
   <li>Uncertainty quantification for robust engineering predictions</li>
-<li>Reduced order models for fast and reliable simulation</li>
+  <li>Reduced order models for fast and reliable simulation</li>
   <li>High-order methods for computational electromagnetics--foundations in place, looking for motivated students to take this further</li>
   <li>MHD, compressible flow, and aeroacoustics -- areas I intend to grow into</li>
 </ul>
 </div>
 
 </div>
+</div>
 
+{% elsif section == "positions" %}
 <div class="positions-box">
 <h3>Open Positions</h3>
 <p>
@@ -122,3 +203,6 @@ I am actively looking for motivated students and researchers to join the group a
 </p>
 </div>
 
+{% endif %}
+
+{% endfor %}

@@ -1,0 +1,11 @@
+# Section order is controlled by _data/homepage.yml
+items:
+  - date: "2026-06-06"
+    category: award
+    text: "Pradipan Maitra, MS research scholar in our group, has been awarded the Best Paper Award for his paper presentation titled 'Fisher-Informed Optimal Temporal Sampling for Boundary Heat Flux Estimation in Transient Jet Impingement Cooling' at the Aerospace Symposium on Technological Research Advancements (ASTRA), at the Indian Institute of Space Science and Technology (IIST)."
+    url: ""
+
+  - date: "2026-06-10"
+    category: conference
+    text: "The paper 'Robust Sensor Placement for Boundary Heat-Transfer Identification in Transient Jet Impingement Cooling', authored by Pradipan Maitra, Arijit Hazra, and J. Sai Sreeja, has been accepted for presentation and publication at the 13th International Conference on Heat Transfer and Fluid Flow (HTFF 2026), to be held in London, United Kingdom, from August 18–20, 2026."
+    url: ""
