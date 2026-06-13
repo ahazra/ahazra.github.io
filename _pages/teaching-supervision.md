@@ -133,6 +133,11 @@ engineering systems.
   <span class="course-title"><a href="/courses/me5614-cfd/">Computational Fluid Dynamics</a></span>
   <span class="course-years">2023, 2024</span>
 </div>
+<div class="course-row">
+  <span class="course-code">ME 5016</span>
+  <span class="course-title"><a href="/courses/me5016-incompressible-fluid-flow/">Incompressible Fluid Flows</a></span>
+  <span class="course-years">2026</span>
+</div>
 </div>
 
 <div class="course-group undergrad">
